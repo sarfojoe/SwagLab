@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.9.13 on win32)" generated="20240609 23:03:59.694" rpa="false" schemaversion="3">
+<suite id="s1" name="SwagLabsTests" source="C:\Users\sarfo\PycharmProjects\SwagLab\SwagLabsTests.robot">
+<test id="s1-t1" name="Customer Sorts Product Items" line="9">
+<kw name="Open Browser To Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240609 23:04:00.040" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20240609 23:04:00.041" level="INFO">Firefox driver log is always forced to to: C:\Users\sarfo\PycharmProjects\SwagLab\geckodriver-1.log</msg>
+<status status="PASS" starttime="20240609 23:04:00.040" endtime="20240609 23:04:07.109"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240609 23:04:07.110" endtime="20240609 23:04:07.391"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240609 23:04:07.392" endtime="20240609 23:04:07.474"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:00.039" endtime="20240609 23:04:07.474"/>
+</kw>
+<kw name="Login To Application" library="Keywords">
+<arg>${STANDARD_USER}</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:07.477" level="INFO">Typing text 'standard_user' into text field 'xpath=//*[@id="user-name"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:07.476" endtime="20240609 23:04:07.655"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:07.656" level="INFO">Typing password into text field 'xpath=//*[@id="password"]'.</msg>
+<msg timestamp="20240609 23:04:07.679" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240609 23:04:07.710" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240609 23:04:07.655" endtime="20240609 23:04:07.710"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:07.711" level="INFO">Clicking button 'xpath=//*[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:07.710" endtime="20240609 23:04:07.987"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240609 23:04:07.987" endtime="20240609 23:04:07.993"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:07.474" endtime="20240609 23:04:07.993"/>
+</kw>
+<kw name="Sort Products" library="Keywords">
+<arg>2</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SORT_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:07.994" level="INFO">Clicking element 'xpath=//*[@class="product_sort_container"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:07.994" endtime="20240609 23:04:08.245"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>${SORT_DROPDOWN}</arg>
+<arg>${sort_method}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240609 23:04:08.246" level="INFO">Selecting options from selection list 'xpath=//*[@class="product_sort_container"]' by index 2.</msg>
+<status status="PASS" starttime="20240609 23:04:08.245" endtime="20240609 23:04:08.525"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCT_LIST}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240609 23:04:08.525" endtime="20240609 23:04:08.539"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:07.994" endtime="20240609 23:04:08.539"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240609 23:04:08.539" endtime="20240609 23:04:09.724"/>
+</kw>
+<doc>Verify that a standard customer can sort products by various methods</doc>
+<status status="PASS" starttime="20240609 23:04:00.037" endtime="20240609 23:04:09.726"/>
+</test>
+<test id="s1-t2" name="Checkout And Complete Purchase" line="15">
+<kw name="Open Browser To Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240609 23:04:09.727" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20240609 23:04:09.728" level="INFO">Firefox driver log is always forced to to: C:\Users\sarfo\PycharmProjects\SwagLab\geckodriver-2.log</msg>
+<status status="PASS" starttime="20240609 23:04:09.727" endtime="20240609 23:04:16.051"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240609 23:04:16.052" endtime="20240609 23:04:16.337"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240609 23:04:16.337" endtime="20240609 23:04:16.383"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:09.726" endtime="20240609 23:04:16.383"/>
+</kw>
+<kw name="Login To Application" library="Keywords">
+<arg>${STANDARD_USER}</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:16.387" level="INFO">Typing text 'standard_user' into text field 'xpath=//*[@id="user-name"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:16.386" endtime="20240609 23:04:16.504"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:16.505" level="INFO">Typing password into text field 'xpath=//*[@id="password"]'.</msg>
+<msg timestamp="20240609 23:04:16.513" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240609 23:04:16.538" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240609 23:04:16.504" endtime="20240609 23:04:16.538"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:16.539" level="INFO">Clicking button 'xpath=//*[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:16.538" endtime="20240609 23:04:16.807"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240609 23:04:16.807" endtime="20240609 23:04:16.811"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:16.385" endtime="20240609 23:04:16.811"/>
+</kw>
+<kw name="Add Products To Cart" library="Keywords">
+<for flavor="IN">
+<var>${product}</var>
+<value>@{products}</value>
+<iter>
+<var name="${product}"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${PRODUCT_ITEM}</arg>
+<arg>and ${ADD_TO_CART_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240609 23:04:16.814" endtime="20240609 23:04:16.814"/>
+</kw>
+<status status="NOT RUN" starttime="20240609 23:04:16.814" endtime="20240609 23:04:16.815"/>
+</iter>
+<status status="NOT RUN" starttime="20240609 23:04:16.812" endtime="20240609 23:04:16.815"/>
+</for>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SHOPPING_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:16.815" level="INFO">Clicking element 'xpath=//a[@data-test='shopping-cart-link']'.</msg>
+<status status="PASS" starttime="20240609 23:04:16.815" endtime="20240609 23:04:17.035"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:16.812" endtime="20240609 23:04:17.035"/>
+</kw>
+<kw name="Proceed To Checkout" library="Keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CHECKOUT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.035" level="INFO">Clicking button 'xpath=//*[@id="checkout"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.035" endtime="20240609 23:04:17.272"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIRST_NAME_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240609 23:04:17.273" endtime="20240609 23:04:17.288"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIRST_NAME_INPUT}</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.289" level="INFO">Typing text 'Test' into text field 'xpath=//*[@id='first-name']'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.288" endtime="20240609 23:04:17.321"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LAST_NAME_INPUT}</arg>
+<arg>User</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.321" level="INFO">Typing text 'User' into text field 'xpath=//*[@id="last-name"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.321" endtime="20240609 23:04:17.345"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${POSTAL_CODE_INPUT}</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.346" level="INFO">Typing text '12345' into text field 'xpath=//*[@id="postal-code"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.345" endtime="20240609 23:04:17.372"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.372" level="INFO">Clicking button 'xpath=//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.372" endtime="20240609 23:04:17.603"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${FINISH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.606" level="INFO">Clicking button 'xpath=//*[@id="finish"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.605" endtime="20240609 23:04:17.887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PURCHASE_SUCCESS_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240609 23:04:17.887" endtime="20240609 23:04:17.929"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BACK_HOME_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:17.932" level="INFO">Clicking button 'xpath=//*[@id='back-to-products']'.</msg>
+<status status="PASS" starttime="20240609 23:04:17.931" endtime="20240609 23:04:18.174"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:17.035" endtime="20240609 23:04:18.174"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240609 23:04:18.175" endtime="20240609 23:04:19.313"/>
+</kw>
+<doc>Verify that a standard customer can purchase products successfully</doc>
+<status status="PASS" starttime="20240609 23:04:09.726" endtime="20240609 23:04:19.313"/>
+</test>
+<test id="s1-t3" name="User Is Locked Out From The Platform" line="23">
+<kw name="Open Browser To Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240609 23:04:19.315" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20240609 23:04:19.315" level="INFO">Firefox driver log is always forced to to: C:\Users\sarfo\PycharmProjects\SwagLab\geckodriver-3.log</msg>
+<status status="PASS" starttime="20240609 23:04:19.314" endtime="20240609 23:04:25.445"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240609 23:04:25.445" endtime="20240609 23:04:25.723"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240609 23:04:25.724" endtime="20240609 23:04:25.761"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:19.314" endtime="20240609 23:04:25.761"/>
+</kw>
+<kw name="Login As Locked Out User" library="Keywords">
+<arg>${LOCKED_USER}</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:25.768" level="INFO">Typing text 'locked_out_user' into text field 'xpath=//*[@id="user-name"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:25.767" endtime="20240609 23:04:25.864"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:25.865" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:25.865" endtime="20240609 23:04:25.891"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240609 23:04:25.892" level="INFO">Clicking button 'xpath=//*[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:25.891" endtime="20240609 23:04:26.125"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240609 23:04:26.125" endtime="20240609 23:04:26.128"/>
+</kw>
+<status status="PASS" starttime="20240609 23:04:25.766" endtime="20240609 23:04:26.128"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240609 23:04:26.132" level="INFO">Current page contains element 'xpath=//*[@data-test="error"]'.</msg>
+<status status="PASS" starttime="20240609 23:04:26.130" endtime="20240609 23:04:26.132"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240609 23:04:26.134" endtime="20240609 23:04:27.202"/>
+</kw>
+<doc>Verify that a locked out customer cannot log in using proper credentials</doc>
+<status status="PASS" starttime="20240609 23:04:19.313" endtime="20240609 23:04:27.202"/>
+</test>
+<status status="PASS" starttime="20240609 23:03:59.696" endtime="20240609 23:04:27.203"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="SwagLabsTests">SwagLabsTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

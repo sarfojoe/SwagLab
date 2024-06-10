@@ -1,0 +1,14 @@
+1718001291043	geckodriver	INFO	Listening on 127.0.0.1:63920
+1718001294152	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63921" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sarfo\\AppData\\Local\\Temp\\rust_mozprofilec7b1mi"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1718001294599	Marionette	INFO	Marionette enabled
+1718001294729	Marionette	INFO	Listening on port 63930
+WebDriver BiDi listening on ws://127.0.0.1:63921
+Read port: 63930
+1718001294952	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63921/devtools/browser/cbdc51fa-363d-4f4d-9e5c-bb08ed85f4fa
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.saucedemo.com."
+1718001299314	Marionette	INFO	Stopped listening on port 63930
+Dynamically enable window occlusion 1
